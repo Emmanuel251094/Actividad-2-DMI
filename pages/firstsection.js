@@ -1,3 +1,5 @@
+//Alumno:Andres Emmanuel Reyes Jines
+//Matricula:140854
 import React, { useState } from "react"; 
 import {TouchableOpacity } from "react-native";
 import {
@@ -39,7 +41,7 @@ function FirtsScreen() {
   };
 
   const visibleText = () => {
-    setName("140954 Andres Reyes");
+    setName("140854 Andres Reyes");
     setTimeout(() => {
       setName("");
     }, 5000);
@@ -51,21 +53,30 @@ function FirtsScreen() {
       <StyledText>Practica 1 Contador</StyledText>
       <StyledText>{counter}</StyledText>
 
+      <TouchableOpacity onPress={visibleText}>
+        <StyledButtonStyles>
+          <StyledText>
+            <StyledButtonText>Name</StyledButtonText>
+          </StyledText>
+        </StyledButtonStyles>
+      </TouchableOpacity>
+      
+      <TouchableOpacity onPress={decreaseCounter}>
+        <StyledButtonStyles>
+          <StyledText>
+            <StyledButtonText>Disminuir</StyledButtonText>
+          </StyledText>
+        </StyledButtonStyles>
+      </TouchableOpacity>
       <TouchableOpacity onPress={increaseCounter}>
         <StyledButtonStyles>
           <StyledText>
-            <StyledButtonText>+</StyledButtonText>
+            <StyledButtonText>Aumentar</StyledButtonText>
           </StyledText>
         </StyledButtonStyles>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={decreaseCounter}>
-        <StyledButtonStyles>
-          <StyledText>
-            <StyledButtonText>-</StyledButtonText>
-          </StyledText>
-        </StyledButtonStyles>
-      </TouchableOpacity>
+      
       
       <TouchableOpacity onPress={reset}>
         <StyledButtonStyles>
@@ -85,7 +96,7 @@ function FirtsScreen() {
 
       
 
-      {counter > 10 || counter < 0 ? (
+      {counter > 999 || counter < 0 ? (
         <StyledText>
           <StyledNormalText>
             <StyledNotValid>{"Fuera de Limite"}</StyledNotValid>
@@ -93,7 +104,7 @@ function FirtsScreen() {
         </StyledText>
       ) : (
         <StyledText>
-          {counter <= 8 ? (
+          {counter < 20 ? (
             <StyledValid> Datos Validos</StyledValid>
           ) : (
             <StyledNotValid>Datos Invalidos</StyledNotValid>
@@ -101,14 +112,7 @@ function FirtsScreen() {
         </StyledText>
       )}
 
-      <TouchableOpacity onPress={visibleText}>
-        <StyledButtonStyles>
-          <StyledText>
-            <StyledButtonText>Name</StyledButtonText>
-          </StyledText>
-        </StyledButtonStyles>
-      </TouchableOpacity>
-
+    
       <StyledText>
         <StyledTextP>{name}</StyledTextP>
       </StyledText>

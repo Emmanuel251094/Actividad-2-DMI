@@ -1,3 +1,6 @@
+//Alumno:Andres Emmanuel Reyes Jines
+//Matricula:140854
+
 import React, { useState } from "react";
 import AsyncStorage from "@react-native-community/async-storage";
 import { TouchableOpacity, ScrollView } from "react-native";
@@ -27,10 +30,10 @@ function ThirdScreen() {
     <StyledView>
       <TouchableOpacity onPress={getValueFunction}>
         <StyledButtonStyles>
-          <StyledButtonText>Actualizar</StyledButtonText>
+          <StyledButtonText>Registrar</StyledButtonText>
         </StyledButtonStyles>
       </TouchableOpacity>
-      <StyledText>Lista de articulos</StyledText>
+      <StyledText>Listado de Registro de producto</StyledText>
       <ScrollView>
         {articulo.map((item) => {
           return <StyledText>{item.name}</StyledText>;
@@ -41,3 +44,4 @@ function ThirdScreen() {
 }
 
 export default ThirdScreen;
+

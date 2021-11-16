@@ -1,3 +1,7 @@
+//Alumno:Andres Emmanuel Reyes Jines
+//Matricula:140854
+
+
 import React,  { useState }    from "react";
 import AsyncStorage from '@react-native-community/async-storage';
 import { TouchableOpacity, TextInput} from "react-native";
@@ -22,25 +26,25 @@ function SecondScreen() {
     if (articulo) {
       AsyncStorage.setItem('articuloDelaLista', articulo);
       onChangeText('');
-      alert("Dato guardado");
+      alert("Informacion almacenada Correctamente");
     } else {
-      alert("ingresa un articulo");
+      alert("Escriba nombre del Producto");
     }
 
   };
 
   return (
     <StyledView>
-      <StyledNormalText>Artículo</StyledNormalText>
+      <StyledNormalText>Informacion de Producto</StyledNormalText>
       <TextInput 
-      placeholder="ingresa tu articulo"
+      placeholder="Ingrese nombre del articulo" 
       value={articulo}
       onChangeText={onChangeText}/>
 
       <TouchableOpacity onPress={buttonPressed}>
         <StyledButtonStyles>
           <StyledButtonText>
-            Agregar
+            Guardar
           </StyledButtonText>
         </StyledButtonStyles>
       </TouchableOpacity>
@@ -50,3 +54,4 @@ function SecondScreen() {
 }
 
 export default SecondScreen;
+
