@@ -37,7 +37,7 @@ export default function App() {
             return <Ionicons name={iconName} size={size} color={color} />;
           },
           tabBarActiveTintColor: "black",
-          tabBarInactiveTintColor: "black",
+          tabBarInactiveTintColor: "black", //
         })}
       >
         <Tab.Screen name="Firts Section" component={FirtsScreen} />
